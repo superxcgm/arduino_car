@@ -6,8 +6,10 @@
 #include "timer.h"
 
 class Car {
+
     Wheels wheels;
     Timer timer;
+    friend void foo();
 public:
     void Setup();
     void Loop();
