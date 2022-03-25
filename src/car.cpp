@@ -3,12 +3,12 @@
 
 void Car::Setup() {
     wheels.Init();
+    wheels.Forward();
+    // use sr04 or IR to check if there is a wall in front, and stop forward
+//    timer.Subscribe(/*  */, 50, Timer::kRepeatInf);
 }
 
 void Car::Loop() {
-    wheels.Forward();
-    delay(500);
-    wheels.Stop();
-    delay(500);
+    timer.Tick();
 }
 
