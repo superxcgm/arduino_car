@@ -2,10 +2,13 @@
 #include "car.h"
 
 void Car::Setup() {
-    wheel_left.Init();
-    wheel_right.Init();
+    wheels.Init();
 }
 
 void Car::Loop() {
+    wheels.Forward();
+    delay(500);
+    wheels.Stop();
+    delay(500);
 }
 
